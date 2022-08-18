@@ -1,5 +1,5 @@
 var image = document.createElement('img');
-image.src ="https://raw.githubusercontent.com/yuwukii/NecoArcBuddy/master/assets/images/neco-arc-dance.gif"
+image.src = browser.runtime.getURL("assets/images/neco-arc-dance.gif");
 image.style.height = "200px";
 image.style.width = "auto";
 image.style.position = "fixed";
@@ -8,6 +8,5 @@ image.style.right = "20px";
 image.style.zIndex = "9999";
 document.body.appendChild(image);
 
-const music = new Audio('https://raw.githubusercontent.com/yuwukii/NecoArcBuddy/master/assets/musci/bgm.ogg');
-music.volume = 20;
+const music = new Audio(browser.runtime.getURL("assets/music/bgm.ogg"));
 music.play();

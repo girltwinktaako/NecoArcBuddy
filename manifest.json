@@ -2,10 +2,23 @@
     "name": "Neco Arc Buddy",
     "version": "1.0",
     "description": "Added a little dancing Neco Arc and some good music to every website",
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-    }],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "web_accessible_resources": [
+        "assets/images/neco-arc-dance.gif",
+        "assets/music/bgm.ogg"
+    ],
     "icons": {
         "16": "icons/icon_16x16.png",
         "48": "icons/icon_48x48.png",
