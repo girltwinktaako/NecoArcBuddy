@@ -6,7 +6,10 @@ image.style.position = "fixed";
 image.style.bottom = "20px";
 image.style.right = "20px";
 image.style.zIndex = "9999";
-document.body.appendChild(image);
 
-const music = new Audio(browser.runtime.getURL("assets/music/bgm.ogg"));
-music.play();
+const music = document.createElement("iframe");
+music.src = browser.runtime.getURL("assets/music/bgm.ogg");
+music.allow = "autoplay 'src'";
+
+document.body.appendChild(image);
+document.body.appendChild(music);
