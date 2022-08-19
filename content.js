@@ -10,6 +10,7 @@ image.style.zIndex = "9999";
 const music = document.createElement("iframe");
 music.src = browser.runtime.getURL("assets/music/bgm.ogg");
 music.allow = "autoplay 'src'";
+music.style.display = "none";
 
 document.body.appendChild(image);
 document.body.appendChild(music);
